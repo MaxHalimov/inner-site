@@ -27,28 +27,6 @@ const Contact: React.FC<ContactProps> = (props) => {
         <div className="site-page-content">
             <div style={styles.header}>
                 <h1>Contact</h1>
-                <div style={styles.socials}>
-                    <SocialButton
-                        emoji="📧"
-                        text="Email"
-                        link="mailto:h_mahmadali@mail.ru"
-                    />
-                    <SocialButton
-                        emoji="📱"
-                        text="Telegram"
-                        link="https://t.me/max_halimov" // замените на ваш Telegram
-                    />
-                    <SocialButton
-                        emoji="💬"
-                        text="WhatsApp"
-                        link="https://wa.me/+992559995545" // замените на ваш WhatsApp
-                    />
-                    <SocialButton
-                        emoji="📷"
-                        text="Instagram"
-                        link="https://instagram.com/mahmadali_h" // замените на ваш Instagram
-                    />
-                </div>
             </div>
             <div className="text-block">
                 <p>
@@ -59,7 +37,7 @@ const Contact: React.FC<ContactProps> = (props) => {
                 <p>
                     If you have any questions, collaboration opportunities, or just want to 
                     chat about technology — I'd love to hear from you! 
-                    Feel free to reach out through any of the platforms above.
+                    Feel free to reach out through any of the platforms below.
                 </p>
                 <br />
                 <p>
@@ -68,6 +46,21 @@ const Contact: React.FC<ContactProps> = (props) => {
                         h_mahmadali@mail.ru
                     </a>
                 </p>
+                <br />
+                <div style={styles.socials}>
+                    <SocialButton
+                        text="Telegram"
+                        link="https://t.me/max_halimov"
+                    />
+                    <SocialButton
+                        text="WhatsApp"
+                        link="https://wa.me/+992559995545"
+                    />
+                    <SocialButton
+                        text="Instagram"
+                        link="https://instagram.com/mahmadali_h"
+                    />
+                </div>
             </div>
             <ResumeDownload altText="Need a copy of my resume?" />
         </div>
@@ -76,15 +69,14 @@ const Contact: React.FC<ContactProps> = (props) => {
 
 const styles: StyleSheetCSS = {
     header: {
-        alignItems: 'flex-end',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
     },
     socials: {
-        marginBottom: 16,
-        justifyContent: 'flex-end',
+        display: 'flex',
         flexWrap: 'wrap',
         gap: 8,
+        marginTop: 8,
     },
     socialButton: {
         padding: '8px 12px',
@@ -93,7 +85,6 @@ const styles: StyleSheetCSS = {
         border: '1px solid #ccc',
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 4,
         minWidth: 80,
         transition: 'all 0.2s ease',
     },
@@ -104,10 +95,6 @@ const styles: StyleSheetCSS = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    emoji: {
-        marginRight: 4,
-        fontSize: 14,
     },
 };
 
