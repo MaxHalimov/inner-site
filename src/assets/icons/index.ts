@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import windowResize from './windowResize.png';
 import maximize from './maximize.png';
