@@ -150,7 +150,7 @@ const WebsiteProjects: React.FC<WebsiteProjectsProps> = (props) => {
                         <a
                             rel="noreferrer"
                             target="_blank"
-                            href="https://github.com/max_halimov/nft-markeplace"
+                            href="https://github.com/MaxHalimov/nft-marketplace"
                         >
                             <p>
                                 <b>[GitHub]</b> - NFT Marketplace
