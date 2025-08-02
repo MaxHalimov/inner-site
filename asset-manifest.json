@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/inner-site/static/css/main.8e689ba2.css",
-    "main.js": "/inner-site/static/js/main.bef03729.js",
+    "main.js": "/inner-site/static/js/main.f86f86e4.js",
     "static/js/453.a5b25d5b.chunk.js": "/inner-site/static/js/453.a5b25d5b.chunk.js",
     "static/media/dilsuzi.mp4": "/inner-site/static/media/dilsuzi.4681e0c50e1cd2f08e2e.mp4",
     "static/media/nftmarketplace.mp4": "/inner-site/static/media/nftmarketplace.f839437fddb2e51579e1.mp4",
@@ -17,11 +17,11 @@
     "static/media/Millennium-Bold.ttf": "/inner-site/static/media/Millennium-Bold.cd5e3be832ebd008c852.ttf",
     "index.html": "/inner-site/index.html",
     "main.8e689ba2.css.map": "/inner-site/static/css/main.8e689ba2.css.map",
-    "main.bef03729.js.map": "/inner-site/static/js/main.bef03729.js.map",
+    "main.f86f86e4.js.map": "/inner-site/static/js/main.f86f86e4.js.map",
     "453.a5b25d5b.chunk.js.map": "/inner-site/static/js/453.a5b25d5b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e689ba2.css",
-    "static/js/main.bef03729.js"
+    "static/js/main.f86f86e4.js"
   ]
 }
