@@ -58,7 +58,7 @@ const About: React.FC<AboutProps> = (props) => {
                     We worked on many projects together, including chat bots,
                     multiple game projects, apps, and more. One of these
                     projects is viewable on my{' '}
-                    <Link to="/projects/software">Website Projects</Link> page.
+                    <Link to="/projects/websites">Website Projects</Link> page.
                 </p>
                 <br />
                 <p>
