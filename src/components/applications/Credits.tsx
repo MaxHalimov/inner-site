@@ -8,20 +8,18 @@ export interface CreditsProps extends WindowAppProps {}
 const CREDITS = [
     {
         title: 'Engineering & Design',
-        rows: [['Henry Heffernan', 'All']],
+        rows: [['Max Halimov', 'All']],
     },
     {
         title: 'Modeling & Texturing',
         rows: [
-            ['Henry Heffernan', 'Texturing, Composition, & UV'],
-            ['Mickael Boitte', 'Computer Model'],
-            ['Sean Nicolas', 'Environment Models'],
+            ['Max Halimov', 'Texturing, Composition, & UV'],
         ],
     },
     {
         title: 'Sound Design',
         rows: [
-            ['Henry Heffernan', 'Mixing, Composition, & Foley'],
+            ['Max Halimov', 'Mixing, Composition, & Foley'],
             ['Sound Cassette', 'Office Ambience'],
             ['Windows 95 Startup Sound', 'Microsoft'],
         ],
@@ -29,16 +27,13 @@ const CREDITS = [
     {
         title: 'Special Thanks',
         rows: [
-            ['Bruno Simon', 'SimonDev'],
-            ['Lorelei Kravinsky', 'Scott Bass'],
-            ['Trey Briccetti', 'Mom, Dad & Angela'],
+            ['My Family', 'Dad, Mom & Anastasia ;)'],
         ],
     },
     {
         title: 'Inspiration',
         rows: [
-            ['Bruno Simon', 'Jesse Zhou'],
-            ['Pink Yellow', 'Vivek Patel'],
+            ['Anastasia 😘']
         ],
     },
 ];
@@ -78,7 +73,7 @@ const Credits: React.FC<CreditsProps> = (props) => {
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2022 Henry Heffernan'}
+            bottomLeftText={'© Copyright 2025 Max Halimov'}
         >
             <div
                 onMouseDown={nextSlide}
@@ -86,7 +81,7 @@ const Credits: React.FC<CreditsProps> = (props) => {
                 style={styles.credits}
             >
                 <h2>Credits</h2>
-                <p>henryheffernan.com, 2022</p>
+                <p>maxhalimov.com, 2025</p>
                 <br />
                 <br />
                 <br />
