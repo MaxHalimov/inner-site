@@ -12,6 +12,7 @@
     "@types/react-dom": "^17.0.13",
     "emulators-ui": "^0.73.1",
     "framer-motion": "^6.2.9",
+    "gh-pages": "^6.3.0",
     "js-dos": "^7.3.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
