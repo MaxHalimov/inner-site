@@ -20,7 +20,8 @@ code {
 /* 8px */
 @font-face {
     font-family: Monocraft;
-    src: url(./assets/fonts/Monocraft.ttf);
+    src: url(./assets/fonts/Monocraft.otf) format('opentype');
+    font-display: swap;
 }
 
 @font-face {
