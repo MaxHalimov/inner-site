@@ -1,6 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 
 export interface LinkProps {
@@ -16,6 +15,9 @@ const Link: React.FC<LinkProps> = (props) => {
     // get current location of react router
     const location = useLocation();
     const [isHere, setIsHere] = useState(false);
+    const isMountedRef = useRef(true);
+    const navigateTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const activeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // if current path is the same as the link path
     useEffect(() => {
@@ -28,26 +30,36 @@ const Link: React.FC<LinkProps> = (props) => {
         return () => {};
     }, [location, props.to]);
 
+    // Cleanup timers and mark unmounted to avoid state updates after unmount
+    useEffect(() => {
+        isMountedRef.current = true;
+        return () => {
+            isMountedRef.current = false;
+            if (navigateTimeoutRef.current) {
+                clearTimeout(navigateTimeoutRef.current);
+                navigateTimeoutRef.current = null;
+            }
+            if (activeTimeoutRef.current) {
+                clearTimeout(activeTimeoutRef.current);
+                activeTimeoutRef.current = null;
+            }
+        };
+    }, []);
+
     const [active, setActive] = useState(false);
 
     const handleClick = (e: any) => {
-        let isMounted = true;
         e.preventDefault();
         setActive(true);
         const targetPath = props.to === '' ? '/' : `/${props.to}`;
         if (location.pathname !== targetPath) {
-            setTimeout(() => {
-                if (isMounted) navigate(targetPath);
+            navigateTimeoutRef.current = setTimeout(() => {
+                if (isMountedRef.current) navigate(targetPath);
             }, 100);
         }
-        let t = setTimeout(() => {
-            if (isMounted) setActive(false);
+        activeTimeoutRef.current = setTimeout(() => {
+            if (isMountedRef.current) setActive(false);
         }, 100);
-
-        return () => {
-            isMounted = false;
-            clearTimeout(t);
-        };
     };
 
     return (
