@@ -24,6 +24,13 @@ code {
     font-display: swap;
 }
 
+/* GohuFont Powerline for RU content */
+@font-face {
+    font-family: 'GohuFont Powerline';
+    src: url(./assets/fonts/GohuFont-Powerline.ttf) format('truetype');
+    font-display: swap;
+}
+
 @font-face {
     font-family: MSSerif;
     src: url(./assets/fonts/MSSansSerif.ttf);
@@ -116,7 +123,7 @@ h4 {
 .lang-ru input,
 .lang-ru textarea,
 .lang-ru .site-button {
-    font-family: Monocraft, Millennium, 'Times New Roman', Times, serif !important;
+    font-family: 'GohuFont Powerline', 'GohuFont-Powerline', Monocraft, Millennium, 'Times New Roman', Times, serif !important;
 }
 
 li {
