@@ -1,16 +1,18 @@
 import React from 'react';
 import ResumeDownload from './ResumeDownload';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export interface ExperienceProps {}
 
 const Experience: React.FC<ExperienceProps> = (props) => {
+    const { t } = useI18n();
     return (
         <div className="site-page-content">
             <ResumeDownload />
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>PO Dilszui</h1>
+                        <h1>{t('exp.org1')}</h1>
                         <a
                             rel="noreferrer"
                             target="_blank"
@@ -20,54 +22,38 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>IT spetialist</h3>
+                        <h3>{t('exp.role1')}</h3>
                         <b>
-                            <p>Fall 2023 - Current time...</p>
+                            <p>{t('exp.date1')}</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
-                <p>
-                    Targeted towards families in need of medical support for children,
-                    dilsuzi.tj is the official website of a non-profit public organization
-                    that helps coordinate treatment and fundraising efforts. The platform serves
-                    as a central hub for case documentation, donation updates, and social
-                    awareness campaigns. Built and maintained with modern tools and a focus on accessibility and clarity.
-                </p>
+                <p>{t('exp.p1')}</p>
                 <br />
                 <ul>
                     <li>
-                        <p>
-                            Developed and maintained the main website of the organization using modern web technologies, ensuring stability, clarity, and a user-friendly interface for thousands of monthly visitors.
-                        </p>
+                        <p>{t('exp.l1')}</p>
                     </li>
                     <li>
-                        <p>
-                            Designed custom graphics and posters for social media campaigns using Figma, Canva, and Adobe tools, improving visual communication and engagement with the audience.
-                        </p>
+                        <p>{t('exp.l2')}</p>
                     </li>
                     <li>
-                        <p>
-                            Edited and produced over 30 video projects for social media and fundraising campaigns using Premiere Pro, After Effects, and Final Cut, helping the organization reach a wider audience and increase donations.
-                        </p>
+                        <p>{t('exp.l3')}</p>
                     </li>
                     <li>
-                        <p>
-                            Provided full technical support: from website updates to PC assembly and system configuration for in-office tasks, ensuring smooth day-to-day operation of the organization.
-                        </p>
+                        <p>{t('exp.l4')}</p>
                     </li>
                     <li>
-                        <p>
-                            Created a consistent digital presence for the organization, which played a key role in building public trust and helped families access support more efficiently.
-                        </p>
+                        <p>{t('exp.l5')}</p>
                     </li>
                 </ul>
             </div>
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>PO Dilsuzi</h1>
+                        <h1>{t('exp.org2')}</h1>
                         <a
                             target="_blank"
                             rel="noreferrer"
@@ -77,43 +63,31 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Volunteer</h3>
+                        <h3>{t('exp.role2')}</h3>
                         <b>
-                            <p>Spring 2020 - Fall 2023</p>
+                            <p>{t('exp.date2')}</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
-                <p>
-                    Volunteered as a full-cycle creative and technical specialist at dilsuzi.tj — a non-profit platform supporting medical fundraising for children. Contributed to the organization’s media and digital infrastructure through web management, visual content, and video production.
-                </p>
+                <p>{t('exp.p2')}</p>
                 <br />
                 <ul>
                     <li>
-                        <p>
-                            Took part in over 30+ video projects, handling everything from shooting to post-production using Premiere Pro, After Effects, and Final Cut, significantly enhancing the organization’s social presence.
-                        </p>
+                        <p>{t('exp.l6')}</p>
                     </li>
                     <li>
-                        <p>
-                            Designed impactful visual content for fundraising campaigns using Figma, Canva, Adobe Photoshop, and Illustrator, resulting in improved engagement across platforms.
-                        </p>
+                        <p>{t('exp.l7')}</p>
                     </li>
                     <li>
-                        <p>
-                            Maintained and updated the organization's website, ensuring accessibility, clean structure, and reliability for visitors seeking support or donation info.
-                        </p>
+                        <p>{t('exp.l8')}</p>
                     </li>
                     <li>
-                        <p>
-                            Assembled and configured PC workstations for the team, helping improve productivity and performance within the office.
-                        </p>
+                        <p>{t('exp.l9')}</p>
                     </li>
                     <li>
-                        <p>
-                            Provided continuous IT support and creative input to help scale the impact of the organization and improve its communication strategies.
-                        </p>
+                        <p>{t('exp.l10')}</p>
                     </li>
                 </ul>            </div>
         </div>

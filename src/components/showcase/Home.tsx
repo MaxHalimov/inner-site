@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from '../general';
+import { useI18n } from '../../i18n/I18nProvider';
 
 
 import { useNavigate } from 'react-router';
@@ -8,6 +9,7 @@ export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = (props) => {
     const navigate = useNavigate();
+    const { t } = useI18n();
 
     const goToContact = () => {
         navigate('/contact');
@@ -17,24 +19,24 @@ const Home: React.FC<HomeProps> = (props) => {
         <div style={styles.page}>
             <div style={styles.header}>
                 <h1 style={styles.name}>Max Halimov</h1>
-                <h2>IT spetialist</h2>
+                <h2>{t('home.role')}</h2>
             </div>
             <div style={styles.buttons}>
-                <Link containerStyle={styles.link} to="about" text="ABOUT" />
+                <Link containerStyle={styles.link} to="about" text={t('nav.about')} />
                 <Link
                     containerStyle={styles.link}
                     to="experience"
-                    text="EXPERIENCE"
+                    text={t('nav.experience')}
                 />
                 <Link
                     containerStyle={styles.link}
                     to="projects"
-                    text="PROJECTS"
+                    text={t('nav.projects')}
                 />
                 <Link
                     containerStyle={styles.link}
                     to="contact"
-                    text="CONTACT"
+                    text={t('nav.contact')}
                 />
             </div>
             <div style={styles.forHireContainer} onMouseDown={goToContact}>

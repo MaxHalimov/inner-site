@@ -1,19 +1,21 @@
 import React from 'react';
 import printer from '../../assets/resume/printer.gif';
 import Resume from '../../assets/resume/MyCV.pdf';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export interface ResumeDownloadProps {
     altText?: string;
 }
 
 const ResumeDownload: React.FC<ResumeDownloadProps> = ({ altText }) => {
+    const { t } = useI18n();
     return (
         <div style={styles.resumeContainer}>
             <img style={styles.resumePrinter} alt="" src={printer} />
             <div style={styles.resumeContainerText}>
-                <h3>{altText ? altText : 'Looking for my resume?'}</h3>
+                <h3>{altText ? altText : t('resume.title')}</h3>
                 <a rel="noreferrer" target="_blank" href={Resume}>
-                    <p>Click here to download it!</p>
+                    <p>{t('resume.link')}</p>
                 </a>
             </div>
         </div>

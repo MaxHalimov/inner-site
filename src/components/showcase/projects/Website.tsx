@@ -4,45 +4,39 @@ import dilsuzi from '../../../assets/pictures/projects/website/dilsuzi.mp4';
 import nftm from '../../../assets/pictures/projects/website/nftmarketplace.mp4';
 import ResumeDownload from '../ResumeDownload';
 import VideoAsset from '../../general/VideoAsset';
+import { useI18n } from '../../../i18n/I18nProvider';
 
 export interface WebsiteProjectsProps {}
 
 const WebsiteProjects: React.FC<WebsiteProjectsProps> = (props) => {
+    const { t } = useI18n();
     return (
         <div className="site-page-content">
-            <h1>Website</h1>
-            <h3>Projects</h3>
+            <h1>{t('web.header1')}</h1>
+            <h3>{t('web.header2')}</h3>
             <br />
-            <p>
-                Below are some of my favorite website projects I have worked on
-                over the last few years.
-            </p>
+            <p>{t('web.p1')}</p>
             <br />
             <ResumeDownload />
             <br />
             <div className="text-block">
-                <h2>PO Dilsuzi</h2>
+                <h2>{t('web.dilsuzi.h')}</h2>
                 <br />
-                <p>
-                    The official website of the public organization Dilsuzi, which helps children from Tajikistan access life-saving medical treatment abroad.
-
-                    I contributed to the development and ongoing maintenance of the website, focusing on stability, user-friendly navigation, and responsive design.              </p>
+                <p>{t('web.dilsuzi.p1')}</p>
+                <br />
+                <p>{t('web.dilsuzi.p2')}</p>
                 <br />
                 <div className="captioned-image">
                     <VideoAsset src={dilsuzi} />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 1:</b> dilsuzi.tj.
+                            <b>{t('web.dilsuzi.fig1')}</b>
                         </sub>
                     </p>
                 </div>
-                <p>
-                    In addition to technical work, I created visual assets and video content for social media and fundraising campaigns. The project involved producing dozens of promotional videos and graphic materials that strengthened the organization’s public image and outreach.
-
-                    This project brought together my skills in web development, graphic design, and video editing — and allowed me to make a meaningful impact through technology and creativity.
-                </p>
+                <p>{t('web.dilsuzi.p3')}</p>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('web.links')}</h3>
                 <ul>
                     <li>
                         <a
@@ -57,10 +51,7 @@ const WebsiteProjects: React.FC<WebsiteProjectsProps> = (props) => {
                     </li>
                 </ul>
                 <p>
-                    I'm skipping over a lot of details in exchange for brevity,
-                    but I do plan on doing a more in depth breakdown for those
-                    interested sometime in the future. To get updates with that
-                    project feel free to follow me on telegram{' '}
+                    {t('web.more')}{' '}
                     <a
                         rel="noreferrer"
                         target="_blank"
@@ -71,35 +62,25 @@ const WebsiteProjects: React.FC<WebsiteProjectsProps> = (props) => {
                 </p>
             </div>
             <div className="text-block">
-                <h2>TOJIKONSMART</h2>
+                <h2>{t('web.tojikon.h')}</h2>
                 <br />
-                <p>
-                    Educational platform designed to help aspiring sellers from Tajikistan successfully launch
-                    and scale their businesses on major online marketplaces.
-
-                    I developed and designed the website using Tilda, with a focus on clarity,
-                    accessibility, and mobile responsiveness. One of the key features I created is a custom-built
-                    profit calculator that helps users estimate their net income after platform fees, logistics,
-                    and other expenses — a tool tailored specifically for first-time sellers.
-
-                </p>
+                <p>{t('web.tojikon.p1')}</p>
+                <br />
+                <p>{t('web.tojikon.p2')}</p>
                 <br />
                 <div className="captioned-image">
                     <VideoAsset src={tjksmart} />
                     <div style={styles.caption}>
                         <p>
                             <sub>
-                                <b>Figure 2: </b> tojikonsmart.tilda.ws.
+                                <b>{t('web.tojikon.fig2')}</b>
                             </sub>
                         </p>
                     </div>
                 </div>
-                <p>
-                    This project highlights my ability to combine no-code/low-code platforms with custom logic
-                    to deliver functional tools and intuitive user experiences for a targeted audience.
-                </p>
+                <p>{t('web.tojikon.p2')}</p>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('web.links')}</h3>
                 <ul>
                     <li>
                         <a
@@ -116,35 +97,23 @@ const WebsiteProjects: React.FC<WebsiteProjectsProps> = (props) => {
                 </ul>
             </div>
             <div className="text-block">
-                <h2>NFT - Marketplace</h2>
+                <h2>{t('web.nft.h')}</h2>
                 <br />
-                <p>
-                    NFT Marketplace is a fully responsive web interface prototype for buying, selling,
-                    and showcasing NFTs, built as part of a front-end development practice project.
-
-                    I developed the project using HTML, CSS, and JavaScript, focusing on a clean UI,
-                    adaptive layout, and smooth user experience. The platform includes pages for home,
-                    explore, wallet connection, and NFT item details.
-                </p>
+                <p>{t('web.nft.p1')}</p>
+                <br />
+                <p>{t('web.nft.p2')}</p>
                 <br />
                 <div className="captioned-image">
                     <VideoAsset src={nftm} />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 3:</b> NFT Marketplace
+                            <b>{t('web.nft.fig3')}</b>
                         </sub>
                     </p>
                 </div>
-                <p>
-                    Though not connected to a blockchain backend,
-                    it simulates real-world NFT marketplace behavior and showcases my skills in layout design,
-                    component structuring, and responsive development.
-
-                    This project allowed me to explore the UI/UX patterns of modern Web3 platforms and sharpen
-                    my front-end abilities in a visually rich and trend-driven domain.
-                </p>
+                <p>{t('web.nft.p3')}</p>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('web.links')}</h3>
                 <ul>
                     <li>
                         <a

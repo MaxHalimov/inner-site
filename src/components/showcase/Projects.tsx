@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import website from '../../assets/pictures/projects/software.gif';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export interface ProjectsProps {}
 
@@ -63,24 +64,20 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
 };
 
 const Projects: React.FC<ProjectsProps> = (props) => {
+    const { t } = useI18n();
     return (
         <div className="site-page-content">
-            <h1>Projects</h1>
-            <h3>& Hobbies</h3>
+            <h1>{t('projects.header')}</h1>
+            <h3>{t('projects.subheader')}</h3>
             <br />
-            <p>
-                Click on one of the areas below to check out some of my favorite
-                projects I've done in that field. I spent a lot of time to
-                include a lot of visuals and interactive media to showcase each
-                project. Enjoy!
-            </p>
+            <p>{t('projects.p1')}</p>
             <br />
             <div style={styles.projectLinksContainer}>
                 <ProjectBox
                     icon={website}
                     iconStyle={styles.computerIcon}
-                    title="Website"
-                    subtitle="PROJECTS"
+                    title={t('projects.website')}
+                    subtitle={t('projects.projects')}
                     route="websites"
                 />
             </div>

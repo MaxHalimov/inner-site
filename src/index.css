@@ -19,6 +19,11 @@ code {
 
 /* 8px */
 @font-face {
+    font-family: Monocraft;
+    src: url(./assets/fonts/Monocraft.ttf);
+}
+
+@font-face {
     font-family: MSSerif;
     src: url(./assets/fonts/MSSansSerif.ttf);
 }

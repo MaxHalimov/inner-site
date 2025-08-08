@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from '../general';
 
 import { useLocation, useNavigate } from 'react-router';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export interface VerticalNavbarProps {}
 
@@ -9,6 +10,7 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
     const location = useLocation();
     const [projectsExpanded, setProjectsExpanded] = useState(false);
     const [isHome, setIsHome] = useState(false);
+    const { t } = useI18n();
 
     const navigate = useNavigate();
     const goToContact = () => {
@@ -37,12 +39,12 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
                 <h3 style={styles.headerShowcase}>Showcase</h3>
             </div>
             <div style={styles.links}>
-                <Link containerStyle={styles.link} to="" text="HOME" />
-                <Link containerStyle={styles.link} to="about" text="ABOUT" />
+                <Link containerStyle={styles.link} to="" text={t('nav.home')} />
+                <Link containerStyle={styles.link} to="about" text={t('nav.about')} />
                 <Link
                     containerStyle={styles.link}
                     to="experience"
-                    text="EXPERIENCE"
+                    text={t('nav.experience')}
                 />
                 <Link
                     containerStyle={Object.assign(
@@ -51,7 +53,7 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
                         projectsExpanded && styles.expandedLink
                     )}
                     to="projects"
-                    text="PROJECTS"
+                    text={t('nav.projects')}
                 />
                 {
                     // if current path contains projects
@@ -60,7 +62,7 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
                             <Link
                                 containerStyle={styles.insetLink}
                                 to="projects/websites"
-                                text="WEBSITES"
+                                text={t('nav.websites')}
                             />
                         </div>
                     )
@@ -68,7 +70,7 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
                 <Link
                     containerStyle={styles.link}
                     to="contact"
-                    text="CONTACT"
+                    text={t('nav.contact')}
                 />
             </div>
             <div style={styles.spacer} />

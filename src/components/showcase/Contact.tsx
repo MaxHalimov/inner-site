@@ -1,5 +1,6 @@
 import React from 'react';
 import ResumeDownload from './ResumeDownload';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export interface ContactProps {}
 
@@ -23,25 +24,19 @@ const SocialButton: React.FC<SocialButtonProps> = ({ link, text, emoji }) => {
 };
 
 const Contact: React.FC<ContactProps> = (props) => {
+    const { t } = useI18n();
     return (
         <div className="site-page-content">
             <div style={styles.header}>
-                <h1>Contact</h1>
+                <h1>{t('contact.header')}</h1>
             </div>
             <div className="text-block">
-                <p>
-                    Thank you for taking the time to explore my portfolio! 
-                    It means a lot to me, and I truly appreciate your interest in my work.
-                </p>
+                <p>{t('contact.p1')}</p>
+                <br />
+                <p>{t('contact.p2')}</p>
                 <br />
                 <p>
-                    If you have any questions, collaboration opportunities, or just want to 
-                    chat about technology — I'd love to hear from you! 
-                    Feel free to reach out through any of the platforms below.
-                </p>
-                <br />
-                <p>
-                    <b>Email: </b>
+                    <b>{t('contact.email')} </b>
                     <a href="mailto:h_mahmadali@mail.ru">
                         h_mahmadali@mail.ru
                     </a>
@@ -49,20 +44,20 @@ const Contact: React.FC<ContactProps> = (props) => {
                 <br />
                 <div style={styles.socials}>
                     <SocialButton
-                        text="Telegram"
+                        text={t('contact.telegram')}
                         link="https://t.me/max_halimov"
                     />
                     <SocialButton
-                        text="WhatsApp"
+                        text={t('contact.whatsapp')}
                         link="https://wa.me/+992559995545"
                     />
                     <SocialButton
-                        text="Instagram"
+                        text={t('contact.instagram')}
                         link="https://instagram.com/mahmadali_h"
                     />
                 </div>
             </div>
-            <ResumeDownload altText="Need a copy of my resume?" />
+            <ResumeDownload altText={t('resume.title')} />
         </div>
     );
 };
