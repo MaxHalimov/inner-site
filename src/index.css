@@ -106,6 +106,19 @@ h4 {
     letter-spacing: 0px;
 }
 
+/* Use Monocraft only when RU is active */
+.lang-ru body,
+.lang-ru p,
+.lang-ru h1,
+.lang-ru h2,
+.lang-ru h3,
+.lang-ru h4,
+.lang-ru input,
+.lang-ru textarea,
+.lang-ru .site-button {
+    font-family: Monocraft, Millennium, 'Times New Roman', Times, serif !important;
+}
+
 li {
     margin-bottom: 16px;
 }

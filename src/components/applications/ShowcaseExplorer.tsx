@@ -9,6 +9,7 @@ import Contact from '../showcase/Contact';
 import SoftwareProjects from '../showcase/projects/Website';
 import VerticalNavbar from '../showcase/VerticalNavbar';
 import useInitialWindowSize from '../../hooks/useInitialWindowSize';
+import LanguageSwitch from '../general/LanguageSwitch';
 
 export interface ShowcaseExplorerProps extends WindowAppProps {}
 
@@ -30,6 +31,7 @@ const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
         >
             <Router>
                 <div className="site-page">
+                    <LanguageSwitch />
                     <VerticalNavbar />
                     <Routes>
                         <Route path="/" element={<Home />} />

@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { translations, SupportedLang } from './translations';
 
 type I18nContextValue = {
@@ -28,6 +28,13 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [lang, changeLang]);
 
   const value = useMemo<I18nContextValue>(() => ({ lang, t, setLang: changeLang, toggleLang }), [lang, t, changeLang, toggleLang]);
+
+  // Attach language class to <html> for language-specific styling (e.g., fonts)
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.remove('lang-ru', 'lang-en');
+    root.classList.add(lang === 'ru' ? 'lang-ru' : 'lang-en');
+  }, [lang]);
 
   return (
     <I18nContext.Provider value={value}>
