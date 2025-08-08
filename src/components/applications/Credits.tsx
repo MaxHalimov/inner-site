@@ -30,12 +30,6 @@ const CREDITS = [
             ['My Family', 'Dad, Mom & Anastasia ;)'],
         ],
     },
-    {
-        title: 'Inspiration',
-        rows: [
-            ['Anastasia 😘']
-        ],
-    },
 ];
 
 const Credits: React.FC<CreditsProps> = (props) => {
