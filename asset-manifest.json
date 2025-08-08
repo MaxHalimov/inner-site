@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/inner-site/static/css/main.61966ea4.css",
-    "main.js": "/inner-site/static/js/main.b7d5aecc.js",
+    "main.css": "/inner-site/static/css/main.347bccee.css",
+    "main.js": "/inner-site/static/js/main.295530db.js",
     "static/js/453.a5b25d5b.chunk.js": "/inner-site/static/js/453.a5b25d5b.chunk.js",
     "static/media/dilsuzi.mp4": "/inner-site/static/media/dilsuzi.4681e0c50e1cd2f08e2e.mp4",
     "static/media/nftmarketplace.mp4": "/inner-site/static/media/nftmarketplace.f839437fddb2e51579e1.mp4",
@@ -16,12 +16,12 @@
     "static/media/Millennium.ttf": "/inner-site/static/media/Millennium.e16d74a8e8e0567ce30e.ttf",
     "static/media/Millennium-Bold.ttf": "/inner-site/static/media/Millennium-Bold.cd5e3be832ebd008c852.ttf",
     "index.html": "/inner-site/index.html",
-    "main.61966ea4.css.map": "/inner-site/static/css/main.61966ea4.css.map",
-    "main.b7d5aecc.js.map": "/inner-site/static/js/main.b7d5aecc.js.map",
+    "main.347bccee.css.map": "/inner-site/static/css/main.347bccee.css.map",
+    "main.295530db.js.map": "/inner-site/static/js/main.295530db.js.map",
     "453.a5b25d5b.chunk.js.map": "/inner-site/static/js/453.a5b25d5b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61966ea4.css",
-    "static/js/main.b7d5aecc.js"
+    "static/css/main.347bccee.css",
+    "static/js/main.295530db.js"
   ]
 }
