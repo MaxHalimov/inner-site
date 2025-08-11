@@ -1,6 +1,6 @@
 import React from 'react';
 import printer from '../../assets/resume/printer.gif';
-import Resume from '../../assets/resume/MyCV.pdf';
+import Resume from '../../assets/resume/CV.pdf';
 import { useI18n } from '../../i18n/I18nProvider';
 
 export interface ResumeDownloadProps {

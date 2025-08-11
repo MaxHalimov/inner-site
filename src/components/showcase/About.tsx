@@ -14,13 +14,14 @@ const About: React.FC<AboutProps> = (props) => {
         <div className="site-page-content">
             {/* <img src={me} style={styles.topImage} alt="" /> */}
             <h1 style={{ marginLeft: -16 }}>{t('about.welcome')}</h1>
-            <h3>{t('about.im')} Max Halimov</h3>
+            <h3 className="millennium-bold-title">I'm Max Halimov</h3>
             <br />
             <div className="text-block">
                 <p>{t('about.p1')}</p>
                 <br />
                 <p>
-                    {t('about.p2')} <Link to="/contact">this form</Link> {t('about.p9')}{' '}
+                    {t('about.p2')} <Link to="/contact">click,</Link>{' '}
+                    {t('about.p9')}{' '}
                     <a href="mailto:h_mahmadali@mail.ru">h_mahmadali@mail.ru</a>
                 </p>
             </div>
@@ -42,7 +43,7 @@ const About: React.FC<AboutProps> = (props) => {
                 </div>
 
                 <p>
-                    {t('about.p5')} <Link to="/projects/software">Website Projects</Link> page.
+                    {t('about.p5')} <Link to="/projects">Projects</Link>
                 </p>
                 <br />
                 <p>{t('about.p6')}</p>
@@ -84,13 +85,11 @@ const About: React.FC<AboutProps> = (props) => {
                         href="https://t.me/max_halimov"
                     >
                         @max_halimov
-                    </a>{' '}
-                    Good luck and have fun!
+                    </a>
                 </p>
                 <br />
                 <p>
                     {t('about.p9')}{' '}
-                    <Link to="/contact">contact page</Link> {' '}
                     <a href="mailto:h_mahmadali@mail.ru">
                         h_mahmadali@mail.ru
                     </a>

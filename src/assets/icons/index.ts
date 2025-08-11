@@ -1,5 +1,3 @@
-import React from 'react';
-
 import windowResize from './windowResize.png';
 import maximize from './maximize.png';
 import minimize from './minimize.png';

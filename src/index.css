@@ -18,18 +18,7 @@ code {
 
 
 /* 8px */
-@font-face {
-    font-family: Monocraft;
-    src: url(./assets/fonts/Monocraft.otf) format('opentype');
-    font-display: swap;
-}
 
-/* GohuFont Powerline for RU content */
-@font-face {
-    font-family: 'GohuFont Powerline';
-    src: url(./assets/fonts/GohuFont-Powerline.ttf) format('truetype');
-    font-display: swap;
-}
 
 @font-face {
     font-family: MSSerif;
@@ -85,6 +74,24 @@ p b {
     color: white;
 }
 
+/* Navbar "Showcase" title */
+.showcase-nav-title {
+    font-family: MillenniumBold, 'Times New Roman', Times, serif;
+}
+
+.lang-ru .showcase-nav-title {
+    font-family: MillenniumBold, 'Times New Roman', Times, serif !important;
+}
+
+/* About page: "I'm Max Halimov" title */
+.millennium-bold-title {
+    font-family: MillenniumBold, 'Times New Roman', Times, serif;
+}
+
+.lang-ru .millennium-bold-title {
+    font-family: MillenniumBold, 'Times New Roman', Times, serif !important;
+}
+
 .toolbar-text {
     font-family: lores-15-bold-alt-oakland;
     font-size: 18px;
@@ -113,17 +120,25 @@ h4 {
     letter-spacing: 0px;
 }
 
-/* Use Monocraft only when RU is active */
+/* RU language: apply MSSerif for general UI text while preserving select English-styled headings */
 .lang-ru body,
 .lang-ru p,
-.lang-ru h1,
 .lang-ru h2,
 .lang-ru h3,
 .lang-ru h4,
 .lang-ru input,
 .lang-ru textarea,
 .lang-ru .site-button {
-    font-family: 'GohuFont Powerline', 'GohuFont-Powerline', Monocraft, Millennium, 'Times New Roman', Times, serif !important;
+    font-family: MSSerif, 'Times New Roman', Times, serif !important;
+}
+
+/* Preserve English styling for main title and showcase window title when RU is active */
+.lang-ru h1 {
+    font-family: gastromond, sans-serif !important;
+}
+
+.lang-ru .showcase-header {
+    font-family: lores-15-bold-alt-oakland !important;
 }
 
 li {

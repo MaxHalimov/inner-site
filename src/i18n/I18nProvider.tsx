@@ -32,6 +32,8 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
   // Attach language class to <html> for language-specific styling (e.g., fonts)
   useEffect(() => {
     const root = document.documentElement;
+    // reflect active language for :lang CSS and accessibility
+    root.setAttribute('lang', lang);
     root.classList.remove('lang-ru', 'lang-en');
     root.classList.add(lang === 'ru' ? 'lang-ru' : 'lang-en');
   }, [lang]);
